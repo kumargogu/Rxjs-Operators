@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { debounceTime, fromEvent } from 'rxjs';
 
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -8,13 +9,16 @@ import { debounceTime, fromEvent } from 'rxjs';
 })
 export class AppComponent implements AfterViewInit{
   title = 'All-Operators';
+  logoUrl: string = './assets/logo.png';
   res: any;
+
   @ViewChild('name') ip: any;
   ngAfterViewInit(): void{
-    fromEvent(this.ip.nativeElement, 'keyup').pipe(debounceTime(2000)).subscribe((x:any) => {
+    fromEvent(this.ip.nativeElement, 'keyup').pipe(debounceTime(2000)).subscribe((x: any) => {
       this.res = x.target.value;
       
-    })
+    });
   }
-  
+
+
 }

@@ -12,6 +12,7 @@ import { FromComponent } from './rxjs/from/from.component';
 import { OfComponent } from './rxjs/of/of.component';
 import { RangeComponent } from './rxjs/range/range.component';
 import { IntervalComponent } from './rxjs/interval/interval.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { IntervalComponent } from './rxjs/interval/interval.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

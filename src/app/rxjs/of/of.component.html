@@ -1,1 +1,25 @@
 <p>of works!</p>
+
+<hr>
+<p [ngClass]="{'txtColor':true}">Directives ngFor,ngclass, ngStyle</p>
+
+toggling style
+
+<button class="btn btn-success" (click)="showSecret=!showSecret" >Dispaly Details</button>
+<p *ngIf="showSecret">Ayyappa Swamy Secret Details here</p>
+
+<br>
+<hr>
+
+number of times clicking and show data
+<button class="btn btn-primary"(click)="onToggleDetils()">Click for details</button>
+<p *ngIf="showSecret"> Show toggle list </p>
+<!-- <div *ngFor="let item of log"
+[ngStyle]="{backgroundColor:item>=5?'blue':'transparent'}"
+[ngClass]="{'txtColor':item>=5}"
+>{{item }}</div> -->
+
+<div *ngFor="let item of log; let i=index"
+[ngStyle]="{backgroundColor:i+1>=5?'blue':'transparent'}"
+[ngClass]="{'txtColor':i+1>=5}"
+>{{i+1}}---{{item | date:'medium'}}</div>   <!--| date:medium will give different format-->

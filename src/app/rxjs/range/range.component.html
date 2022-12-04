@@ -1,1 +1,15 @@
 <p>range works!</p>
+<p >And Structural directive and Attribute directive</p>
+<p greenBg>Custom Direvtive</p>
+
+<input type="text" [(ngModel)]="serverName" placeholder="Enter Server name">
+<p *ngIf="serverName==''"> Server not created</p>
+<p *ngIf="serverName">server created Sername Name:{{serverName}}</p>
+
+<br><hr>
+<div class="alert alert-danger">ng template and ng if else pattern</div>
+<p *ngIf="serverName; else noServer">This is server created and Name:{{serverName}}</p>
+
+<ng-template #noServer>
+    <p>No server </p>
+</ng-template>

@@ -7,6 +7,18 @@ import { of } from 'rxjs';
   styleUrls: ['./of.component.css']
 })
 export class OfComponent implements OnInit {
+  ////////////////////////////////////////
+  //directives code here
+  showSecret: boolean = false;
+
+  log = [];
+  onToggleDetils() {
+    this.showSecret = !this.showSecret;
+    //this.log.push(this.log.length + 1);
+    this.log.push(new Date());
+  }
+  
+  ///////////////////////////////////////
 
   constructor() { }
 

@@ -7,7 +7,7 @@ import { range } from 'rxjs';
   styleUrls: ['./range.component.css']
 })
 export class RangeComponent implements OnInit {
-
+  serverName: string='';
   constructor() { }
 
   ngOnInit(): void {

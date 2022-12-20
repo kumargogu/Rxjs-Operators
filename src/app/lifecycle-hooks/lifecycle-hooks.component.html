@@ -1,0 +1,23 @@
+<br>
+<div class="form-group">
+    <input #course class="form-control">
+    <button class="btn btn-warning" (click)="addCourse(course.value)">Submit Value</button>
+</div>
+<br>
+<button class="btn btn-primary">ngOnChanges()</button>
+<button class="btn btn-primary">ngOnInit()</button>
+<button class="btn btn-primary">ngOnDoCheck()</button>
+<button class="btn btn-primary">ngAfterContentInit()</button>
+<button class="btn btn-primary">ngAfterContentChecked()</button>
+<button class="btn btn-primary">ngAfterViewInit()</button>
+<button class="btn btn-primary">ngAfterViewChecked()</button>
+<button class="btn btn-primary">ngOnDestory()</button><hr>
+ 
+<hr>
+<button class="btn btn-danger" (click)="ngondestroy()">ngOnDestroy</button>
+<hr>
+{{changeValue | arraydisplay}}
+
+<ul>
+    <li *ngFor="let course of changeValue">{{course}}</li>
+</ul>

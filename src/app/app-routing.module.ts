@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
 import { AjaxOperatorComponent } from './rxjs/ajax-operator/ajax-operator.component';
 import { CustomObservableComponent } from './rxjs/custom-observable/custom-observable.component';
 import { EventhandlerComponent } from './rxjs/eventhandler/eventhandler.component';
@@ -9,6 +10,7 @@ import { IntervalComponent } from './rxjs/interval/interval.component';
 import { MapComponent } from './rxjs/map/map.component';
 import { OfComponent } from './rxjs/of/of.component';
 import { RangeComponent } from './rxjs/range/range.component';
+import { TestComponent } from './udmy/test.component';
 
 const routes: Routes = [
   {
@@ -47,6 +49,14 @@ const routes: Routes = [
   {
     path: 'interval',
     component: IntervalComponent
+  },
+  {
+    path: 'lifecyclehooks',
+    component:LifecycleHooksComponent
+  },
+  {
+    path: 'test',
+    component:TestComponent
   }
 ];
 
